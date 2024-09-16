@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portofolio Carolus Nathanell</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        .navbar li a, .navbar-brand {
+            color: aliceblue !important;
+        }
+        .navbar-nav li a:hover{
+            color:black !important;
+            background-color: white !important;
+        }
+        .navbar-nav li.active a.beige {
+            color:black !important;
+            background-color: beige !important;
+        }
+        .navbar-nav li.active a.white {
+            color:black !important;
+            background-color: white !important;
+        }
+        .navbar-nav li.active a.black {
+            border-left: 2px solid white;
+            border-right: 2px solid white;
+            color:white !important;
+            background-color: black !important;
+        }
+        #anchor {
+            scroll-margin-top: 100px;
+        }
+        .slide-left {
+            animation-name: slide-left;
+            animation-timeline: view();
+        }
+        .slide-right {
+            animation-name: slide-right;
+            animation-timeline: view();
+        }
+        .slide-up{
+            animation-name: slide-up;
+            animation-timeline: view();
+        }
+        .fade-in {
+            animation-name: fade-in;
+            animation-timeline: view();
+        }
+        .fade-in-int{
+            animation: fade-in;
+            animation-duration: 2s;
+        }
+        @keyframes slide-left {
+            0% {opacity: 0.2; transform: translateX(70%);} 
+            25% {opacity: 1; transform: translateX(0%);}
+        }
+        @keyframes slide-right {
+            0% {opacity: 0.2; transform: translateX(-70%);} 
+            25% {opacity: 1; transform: translateX(0%);}
+        }
+        @keyframes slide-up {
+            0% {opacity: 0.2; transform: translateY(70%);} 
+            25% {opacity: 1; transform: translateY(0%);}
+        }
+        @keyframes fade-in {
+            0% {scale: .7; opacity: .2;}
+            25% {scale: 1; opacity: 1;}
+        }
+        body{
+            font-family:helvetica;
+        }
+        .jumbotron{
+            padding-top: 120px;
+            background: beige;
+            border-top: 3px solid rgb(150, 120, 40);
+            border-bottom: 3px solid rgb(150, 120, 40);
+        }
+        hr {
+            border-top: 2px solid rgb(150, 120, 40);
+        }
+        .edu {
+            text-align: center;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .img-round{border-radius: 10%;}
+        .gap{
+            margin-top: 80px;
+        }
+        .edu span{font-size: x-large;}
+        .edu-bg-left{
+            padding: 10px 5px 12px;
+            background-color: beige !important;
+            border-radius: 30px 60px;
+            outline-style: solid;
+            outline-color: rgb(150, 120, 40);
+            max-width: 700px;
+            margin:0 auto;
+        }
+        .edu-bg-right{
+            padding: 10px 5px 12px;
+            background-color: beige !important;
+            border-radius: 60px 30px;
+            outline-style: solid;
+            outline-color: rgb(150, 120, 40);
+            max-width: 700px;
+            margin:0 auto;
+        }
+        .img-sert{
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        .achievement{
+            background: beige;
+            margin-top: 80px;
+            padding-bottom: 50px;
+            border-top: 3px solid rgb(150, 120, 40);
+            border-bottom: 3px solid rgb(150, 120, 40);
+        }
+        .hobby{
+            font-size: x-large;
+        }
+        .hobby img{
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            outline-style: solid;
+            outline-color: rgb(150, 120, 40);
+            max-height: 500px;
+        }
+        .movie-main{
+            border-top: 5px solid rgb(150, 120, 40);
+            border-bottom: 5px solid rgb(150, 120, 40);
+            margin-top: 50px;
+            font-size: x-large;
+            color: aliceblue;
+            background-color: black;
+            padding: 5px 10px
+        }
+        .movie-bg-1{
+            position: relative;
+            background: url(https://w0.peakpx.com/wallpaper/234/354/HD-wallpaper-anime-weathering-with-you-boy-girl-hina-amano-hodaka-morishima-sky-tenki-no-ko.jpg) no-repeat center center;
+            background-size: cover;
+            background-position: center;
+            border-radius: 60px;
+            overflow: hidden;
+            outline-style: solid;
+            outline-color:aliceblue;
+        }
+        .movie-bg-2{
+            position: relative;
+            background: url(https://w0.peakpx.com/wallpaper/355/824/HD-wallpaper-anime-spy-x-family-anya-forger-bond-spy-x-family.jpg) no-repeat center center;
+            background-size: cover;
+            background-position: center;
+            border-radius: 60px;
+            overflow: hidden;
+            outline-style: solid;
+            outline-color:aliceblue;
+        }   
+        .movie-bg-3{
+            position: relative;
+            background: url(https://c4.wallpaperflare.com/wallpaper/127/378/401/edge-of-tomorrow-tom-cruise-emily-blunt-4k-wallpaper-preview.jpg) no-repeat center center;
+            background-size: cover;
+            background-position: center;
+            border-radius: 60px;
+            overflow: hidden;
+            outline-style: solid;
+            outline-color:aliceblue;
+        }
+        table{
+            display: table;
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            border: 2px dashed #f69c55;
+        }
+        .innards{
+            backdrop-filter: blur(5px);
+            padding-bottom: 30px;
+            background-color: rgba(0,0,0, 0.3);
+        }
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid rgb(150, 120, 40);
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            border-radius: 15px;
+            outline: none;
+        }
+        input[type=text]:focus {
+            border: 3px solid rgb(78, 60, 20);
+        }
+        /* input error */
+        input.error,
+        textarea.error,
+        select.error {
+            border-color: #dc3545;
+        }
+
+        input.error:focus,
+        textarea.error:focus,
+        select.error:focus {
+            box-shadow: 0 0 0 0.25rem rgb(220 53 69 / 25%);
+        }
+
+        /* input success */
+        input.success,
+        textarea.success,
+        select.success {
+            border-color: #198754;
+        }
+
+        input.success:focus,
+        textarea.success:focus {
+            box-shadow: 0 0 0 0.25rem rgb(25 135 84 / 25%);
+        }
+        .fill-in{
+            font-size: large;
+        }
+        .fill-in small {
+            color: #dc3545;
+        }
+        .fill-in button{
+            background-color: black;
+            color: aliceblue;
+            border-radius: 15px;
+            height: 50px;
+            transition-duration: 0.4s;
+        }
+        .fill-in button:hover {
+            background-color: white;
+            color: black;
+        }
+        .movie-text{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="80">
+
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:black; padding-left: 3%; color: aliceblue;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="https://www.linkedin.com/in/carolus-nathanell/" target="_blank">Carolus Nathanell</a>
+            </div>
+            <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="beige" href="#home">HOME</a></li>
+                <li><a class="white" href="#education">EDUCATION</a></li>
+                <li><a class="beige" href="#achievement">ACHIEVEMENTS</a></li>
+                <li><a class="white" href="#hobby">HOBBY</a></li>
+                <li><a class="black" href="#movie">MOVIES / SERIES</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home"class="jumbotron text-center">
+        <div class="row container-fluid fade-in-int" style="margin: 0px 15%;">
+            <div class="col-sm-5">
+                <a href="https://www.linkedin.com/in/carolus-nathanell/" target="_blank">
+                <img
+                title="LinkedIn Carolus Nathanell"
+                src="https://i.imgur.com/BvxMQNU.jpg"
+                class="img-rounded img-fluid"
+                alt="Foto Porto"
+                width="220"
+                style="max-width: 100%;"></a>
+            </div>
+            <div class="col-sm-7" style="padding-top: 70px;">
+                <h1>Carolus Nathanell</h1>
+                <hr>
+                <p>Informatics Student at ITS</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="education" class="education">
+        <h1 style="text-align: center;">Education</h1>
+
+        <div class="edu container-fluid slide-right">
+            <h2 style="margin-top: 50px;">Elementary School</h2>
+            <div class="edu-bg-left row">
+                <div class="col-sm-3">
+                    <a href="https://sanclar.sch.id/" target="_blank">
+                    <img
+                    title="Website SD Katolik Santa Clara"
+                    src="https://sanclar.sch.id/wp-content/uploads/2017/09/LOGOSC.jpg"
+                    alt="Logo SDK Santa Clara"
+                    class="img-round"
+                    width="120"
+                    class="img-fluid"
+                    style="max-width: 100%;"></a>
+                </div>
+                <div class="col-sm-9">
+                    <span><b>SD Katolik Santa Clara</b><br/>Ngagel Madya No.1, Surabaya, Jawa Timur<br/>2011 - 2017<br/><a href="https://sdk.sanclar.sch.id" target="_blank">sdk.sanclar.sch.id</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="edu container-fluid slide-left">
+            <h2 style="margin-top: 50px;">Junior High School</h2>
+            <div class="edu-bg-right row">
+                <div class="col-sm-3">
+                    <a href="https://angeluscustos.sch.id/" target="_blank">
+                    <img
+                    title="Website SMP Katolik Angelus Custos"
+                    src="https://th.bing.com/th/id/OIP.hviuyEdrkDJRTGFRiNNgDAHaJd?rs=1&pid=ImgDetMain"
+                    alt="Logo SMPK AC"
+                    class="img-round"
+                    width="120"
+                    class="img-fluid"
+                    style="max-width: 100%;"></a>
+                </div>
+                <div class="col-sm-9">
+                    <span><b>SMP Katolik Angelus Custos Surabaya</b><br/>Niaga Dalam No.5, Surabaya, Jawa Timur<br/>2017 - 2020<br/><a href="https://angeluscustos.sch.id/" target="_blank">angeluscustos.sch.id</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="edu container-fluid slide-right">
+            <h2 style="margin-top: 50px;">Senior High School</h2>
+            <div class="edu-bg-left row">
+                <div class="col-sm-3">
+                    <a href="https://frateran.sch.id/" target="_blank">
+                    <img
+                    title="Website SMA Katolik Frateran Surabaya"
+                    src="https://frateran.sch.id/wp-content/uploads/2023/04/Logo-Frateran-512x512-px-300x300.png"
+                    alt="Logo SMAK Frateran"
+                    class="img-round"
+                    width="120"
+                    class="img-fluid"
+                    style="max-width: 100%;"></a>
+                </div>
+                <div class="col-sm-9">
+                    <span><b>SMA Katolik Frateran Surabaya</b><br/>Kepanjen No.8, Surabaya, Jawa Timur<br/>2020 - 2023<br/><a href="https://frateran.sch.id/" target="_blank">frateran.sch.id</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="edu container-fluid slide-left">
+            <h2 style="margin-top: 50px;">University</h2>
+            <div class="edu-bg-right row">
+                <div class="col-sm-3">
+                    <a href="https://www.its.ac.id/informatika/" target="_blank">
+                    <img
+                    title="Website Departemen Informatika ITS"
+                    src="https://www.its.ac.id/wp-content/uploads/2020/07/Lambang-ITS-2-300x300.png"
+                    alt="Lambang Kampus"
+                    class="img-round"
+                    width="120"
+                    class="img-fluid"
+                    style="max-width: 100%;">
+                    </a>
+                </div>
+                <div class="col-sm-9">
+                    <span><b>Institut Teknologi Sepuluh Nopember</b><br/>Teknik Informatika<br/>Jalan Teknik Kimia, Surabaya, Jawa Timur<br/>2023 - now<br/><a href="https://www.its.ac.id/informatika/" target="_blank">its.ac.id/informatika</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="achievement" class="achievement container-fluid text-center">
+        <h1>Achievements</h1>
+        <h2 class="col-sm-12 slide-up"><b>National Zeta Competition 2022</b></h2>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4 fade-in">
+                <h3>Harapan 1 Matematika Tingkat Nasional<hr></h3>
+                <img
+                title="Sertifikat Matematika"
+                src="https://i.imgur.com/ydfjg7l.jpg"
+                alt="Sertifikat Matematika"
+                class="img-sert">
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4 fade-in">
+                <h3>Peringkat 9 Bahasa Inggris Tingkat Nasional<hr></h3>
+                <img
+                title="Sertifikat Bahasa Inggris"
+                src="https://i.imgur.com/chBwW0F.jpg"
+                alt="Sertifikat Bahasa Inggris"
+                class="img-sert">
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+    
+    <div id="hobby" class="hobby text-center">
+        <h1>Hobby</h1>
+        <h2 class="slide-up"><b>Trekking</b></h2><br>
+        <div class="container-fluid">
+            <div class="col-sm-6 slide-left">
+                <a href="https://g.co/kgs/wRvYPPX" target="_blank">
+                <img
+                title="Jawatan Perhutani"
+                src="https://i.imgur.com/w5mVnfm.jpg"
+                alt="Jawatan Perhutani"
+                width="100%"
+                style="object-fit: cover;"></a>
+            </div>
+            <div class="col-sm-6 slide-right">
+                <a href="https://g.co/kgs/ZCX6Zzn" target="_blank">
+                <img
+                title="Bukit Cendono"
+                src="https://i.imgur.com/YvMDMPh.jpg"
+                alt="Bukit Cendono"
+                width="100%"
+                style="object-fit: cover;"></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="movie" class="movie-main text-center">
+        <h1>Top 3 Movies / Series</h1>
+        <div class="movie-bg-1 slide-right" style="margin: 50px 10%">
+            <div class="row innards">
+                <h2 style="padding: 20px 0 20px;"><b>Weathering with You - Tenki no Ko</b></h2>
+                <div class="col-sm-4">
+                    <a href="https://aniwatchtv.to/weathering-with-you-111" target="_blank">
+                        <img
+                        src="https://upload.wikimedia.org/wikipedia/en/6/66/Weathering_with_You_Poster.jpg"
+                        alt="Poster Release Weathering with You"
+                        class="img-fluid"
+                        width="220px"
+                        style="max-width: 100%;">
+                    </a>
+                </div>
+                <div class="col-sm-8" style="padding: 70px 30px;"><p>Weathering with You (Tenki no Ko) was a very enjoyable theater experience, from the sound effects, the songs, and of course the visuals. Although some parts do feel a bit rushed, the overall drama buildup and subsequent climax was satisfying.</p></div>        
+            </div>
+        </div>
+
+        <div class="movie-bg-2 slide-left" style="margin: 50px 10%">
+            <div class="row innards">
+                <h2 style="padding: 20px 0 20px;"><b>Spy x Family</b></h2>
+                <div class="col-sm-4" style="padding: 20px 30px 0px;">
+                    <a href="https://aniwatchtv.to/spy-x-family-17977" target="_blank">
+                        <img
+                        src="https://image.tmdb.org/t/p/original/3r4LYFuXrg3G8fepysr4xSLWnQL.jpg"
+                        alt="Poster Spy x Family"
+                        class="img-fluid"
+                        width="220px"
+                        style="max-width: 100%;">
+                    </a>
+                </div>
+                <div class="col-sm-8" style="padding: 70px 30px;"><p>Spy x Family was an interesting combination of genres, from action to slice of life. The absurdness of some of it's scenes makes it somewhat of a good comedy series. This absurdness also carries some serious tones of animal and human experimentations and the aftermath of a long war.</p></div>        
+            </div>
+        </div>
+
+        <div class="movie-bg-3 slide-right" style="margin: 50px 10%;">
+            <div class="row innards">
+                <h2 style="padding: 20px 0 20px;"><b>Edge of Tommorow</b></h2>
+                <div class="col-sm-4" style="padding: 20px 30px 0px;">
+                    <a href="https://www.imdb.com/title/tt1631867/" target="_blank">
+                        <img
+                        src="https://upload.wikimedia.org/wikipedia/en/f/f9/Edge_of_Tomorrow_Poster.jpg"
+                        alt="Poster Release Edge of Tommorow"
+                        class="img-fluid"
+                        width="220px"
+                        style="max-width: 100%;">
+                    </a>
+                </div>
+                <div class="col-sm-8" style="padding: 70px 30px;">Edge of Tommorow has a nice premise, restarting the day after dying. Some of the restarts are morbidly kind of funny, though the majority of it contains some serious and grimy moments.</div>
+            </div>
+        </div>
+    </div>
+
+    <form id="contactForm">
+        <input type="text" name="name" placeholder="Nama" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Pesan" required></textarea>
+        <button type="submit" id="submitButton">Kirim</button>
+        <p id="statusMessage"></p>
+    </form>
+    
+    <!-- <div class="fill-in container fade-in" style="margin-top: 80px; margin-bottom: 80px;">
+        <form id="visitor">
+            <h1 style="text-align: center;">Thanks For Visiting!</h1>
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your fullname">
+                <small></small>
+            </div>
+            <br>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email address">
+                <small></small>
+            </div>
+            <br>
+            <div class="field">
+                <label for="message">Message</label>
+                <input type="text" id="message" name="message" placeholder="Enter your message">
+                <small></small>
+            </div>
+            <br>
+            <div class="field" style="text-align: center;">
+                <button id="submit" type="submit" class="full">Submit</button>
+                <span id="loadingIcon" class="loading-icon">🔄</span>
+            </div>
+        </form>
+        <div id="successMessage" class="success-message">Terkirim</div>
+    </div> -->
+    <!-- <script src="js/form.js"></script> -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+    
+            const submitButton = document.getElementById('submitButton');
+            const statusMessage = document.getElementById('statusMessage');
+    
+            // Change button to loading icon
+            submitButton.innerHTML = 'Loading...';
+            submitButton.disabled = true;
+    
+            // Collect form data
+            const formData = new FormData(this);
+    
+            // Send data to server
+            fetch('https://debug.nafkhanzam.com/web-programming-e03', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update UI on success
+                submitButton.innerHTML = 'Kirim';
+                submitButton.disabled = false;
+                statusMessage.innerHTML = 'Terkirim';
+            })
+            .catch(error => {
+                // Handle errors
+                submitButton.innerHTML = 'Kirim';
+                submitButton.disabled = false;
+                statusMessage.innerHTML = 'Error: ' + error.message;
+            });
+        });
+    </script>
+    
+    <!-- <script>
+    myForm.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch("localhost:8000", {
+            method: 'post',
+            body: formData
+        }).then(function(response){
+            return response.text();
+        }).then(function(text){
+            console.log(text);
+        }).catch(function(error){
+            console.error();
+        })
+    });
+    </script> -->
+</body>
+</html>
